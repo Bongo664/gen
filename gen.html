@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Generator</title>
 </head>
+<script src="script.js"></script>
 <body>
     <header>
         <h1>Generator</h1>
@@ -14,29 +15,54 @@
     <div class="left">
         <div>
         <h2>Font size</h2>
-        <input type="text">
+        <input type="number" id="size">
         <h2>Color</h2>
-        <input type="text">
+        <input type="color" id="color">
         <h2>letter spacing</h2>
-        <input type="text">
+        <input type="number" id="space">
         <h2>style</h2>
-        <input type="text">
+        <input type="text" id="style">
     </div><div>
-        <button class="but1">Wyślij</button>
+        <button class="but1" onclick="ciul()">Wyślij</button>
     </div>
         <div class="nie">
             <h2>border color</h2>
-            <input type="text">
+            <input type="color" id="bcolor">
             <h2>border size</h2>
-            <input type="text">
+            <input type="number" id="bsize">
             <h2>border style</h2>
-            <input type="text"><input type="text"><input type="text">
+            <input type="text" id="bstyle">
+        </div>
+        <div>
+            <button class="but1">Wyślij</button>
         </div>
     </div>
     <div class="mid">
-
+        <div class="srodek">
+            <p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.</p>
+        </div>
+        <div class="tak">
+            <button class="but2">reset</button>
+        </div>
     </div>
     <div class="right">
+        <h1>Span</h1>
+        <h2>font size</h2>
+        <input type="number" class="niet">
+        <h2>bg-color</h2>
+        <input type="color" class="niet">
+        <h2>color</h2>
+        <input type="color" class="niet">
+        <h2>border size</h2>
+        <input type="number" class="niet">
+        <h2>border color</h2>
+        <input type="color" class="niet">
+        <h2>border style</h2>
+        <input type="text" class="niet">
+        <div class="nire"><button>reset</button><button>wyślij</button></div>
+        <input type="range" min="200" max="1000" class="niet">
+        <input type="range" min="200" max="1000" class="niet">
+
 
     </div>
 </div>
