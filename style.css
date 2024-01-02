@@ -1,5 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 header{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px black solid;
+    height: 7vh;
+}
+.left{
+    height: 92vh;
+    border: 2px black solid;
+    width: 15%;
+    text-align: center;
+}
+.mid{
+    height: 92vh;
+    border: 2px black solid;
+    width: 70%;
+}
+.right{
+    height: 92vh;
+    border: 2px black solid;
+    width: 15%;
+}
+.main{
+    display: flex;
+}
+.but1{
+    margin-top: 10%;
+    float: right;
+    margin-right: 5%;
+}
+input{
+    margin-left: 1%;
+    width: 80%;
+
+}
+.nie{
+    margin-top: 30%;
 }
