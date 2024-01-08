@@ -1,74 +1,99 @@
-*{
-    margin: 0;
-    padding: 0;
+body, html{
+    margin: 0px;
+    padding: 0px;
 }
 header{
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px black solid;
-    height: 7vh;
+    border-bottom: 1px solid black;
+}
+header h1{
+    margin: 0px;
+}
+main{
+    display: flex;
 }
 .left{
-    height: 92vh;
-    border: 2px black solid;
-    width: 15%;
-    text-align: center;
+    width: 20%;
+    height: 100%;
+    display: block;
 }
-.mid{
-    height: 92vh;
-    border: 2px black solid;
-    width: 70%;
+.center{
+    width: 60%;
+    min-height: 94.7vh;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    display: flex;
+    justify-content: center;
 }
 .right{
-    height: 92vh;
-    border: 2px black solid;
-    width: 15%;
+    width: 20%;
+    height: 100%;
 }
-.main{
+.block{
+    display: block;
+    width: 50%;
+}
+#lorem{
+    border: 1px solid black;
+    height: auto;
+    margin: 50px;
+}
+.cbutton{
     display: flex;
-}
-.but1{
-    margin-top: 10%;
-    float: right;
-    margin-right: 5%;
-    cursor: pointer;
-}
-input{
-    margin-left: 1%;
-    width: 80%;
-}
-.nie{
-    margin-top: 30%;
-}
-.srodek{
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-    border: 2px black solid;
-    height: 70vh;
-}
-.but2{
-    height: 50px;
-    width: 200px;
-    cursor: pointer;
-}
-.tak{
-    display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 2.75%;
 }
-.nire{
-    margin-top: 5%;
-    justify-content: space-around;
+.lup{
     display: flex;
+    flex-direction: column;
 }
-.niet{
-    margin-left: 10%;
-    width: 80%;
+.ldown{
+    display: block;
 }
-h2{
-    text-align: center;
+.left p{
+    font-size: 20px;
+    margin: 10px;
+}
+.left div{
+    margin-left: 50px;
+}
+.lbutton{
+    display: flex;
+    justify-content: flex-end;
+}
+.left button{
+    margin-top: 30px;
+}
+.center p{
+    padding: 4px;
+}
+.left button{
+    margin-right: 10px;
+}
+.right{
+    display: flex;
+    justify-content: center;
+}
+.cn{
+    display: flex;
+    justify-content: center;
+}
+.rbutton button{
+    margin-left: 10px;
+    margin-top: 25px;
+}
+.block2{
+    display: block;
+}
+.right p{
+    font-size: 20px;
+    margin: 10px;
+}
+#span{
+    border: 0px solid black;
+}
+#span2{
+    border: 0px solid black;
 }

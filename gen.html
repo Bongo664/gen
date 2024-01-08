@@ -1,70 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Generator</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
-<script src="script.js"></script>
 <body>
-    <header>
-        <h1>Generator</h1>
-    </header>
-    <div class="main">
-    <div class="left">
-        <div>
-        <h2>Font size</h2>
-        <input type="number" id="size">
-        <h2>Color</h2>
-        <input type="color" id="color">
-        <h2>letter spacing</h2>
-        <input type="number" id="space">
-        <h2>style</h2>
-        <input type="text" id="style">
-    </div><div>
-        <button class="but1" onclick="ciul()">Wyślij</button>
-    </div>
-        <div class="nie">
-            <h2>border color</h2>
-            <input type="color" id="bcolor">
-            <h2>border size</h2>
-            <input type="number" id="bsize">
-            <h2>border style</h2>
-            <input type="text" id="bstyle">
+    <header><h1>Generator</h1></header>
+    <main>
+        <div class="left">
+            <div class="lup">
+                <div class="fontsize"><p>Font size</p><input type="text" id="fontsize" placeholder="Podaj wartość"></div>
+                <div class="color"><p>Color</p><input type="color" id="kolor"></div>
+                <div class="letterspace"><p>Letter space</p><input type="text" id="letterspace" placeholder="Podaj wartość"></div>
+                <div class="style"><p>Style</p><input type="text" id="style" placeholder="Podaj wartość"></div>
+                <div class=""></div>
+                <div class="lbutton"><button onclick="reset1()">RESET</button><button id="button" onclick="size(); color(); space(); style()" >Zmień</button></div>
+            </div>
+            <div class="ldown">
+                <div class="bordercolor"><p>Border color</p><input type="color" id="bordercolor"></div>
+                <div class="bordersize"><p>Border size</p><input type="text" id="bordersize" placeholder="Podaj wartość"></div>
+                <div class="borderstyle"><p>Border style</p><input type="text" id="borderstyle" placeholder="Podaj wartość"></div>
+                <div class="borderradius"><p>Border radius</p><input type="text" id="borderradius" placeholder="Podaj wartość"></div>
+                <div class=""></div>
+                <div class="lbutton"><button onclick="reset2()">RESET</button><button id="button" onclick="bcolor(); bsize(); bstyle(); bradius()">Zmień</button></div>
+            </div>
         </div>
-        <div>
-            <button class="but1">Wyślij</button>
+        <div class="center">
+            <div class="block">
+                <div id="lorem">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus, metus a semper sollicitudin, turpis enim gravida ante, sit amet pretium velit ante sed nisl. Donec accumsan dui non consectetur interdum. <span id="span">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</span> Vestibulum in dui ac lectus tristique venenatis. Cras pretium faucibus urna, sed sodales sapien hendrerit vitae. Vivamus vestibulum lorem at leo molestie, ac eleifend felis dictum. Mauris vestibulum in dolor et ultricies. Pellentesque congue enim nec porttitor euismod. Integer finibus lacus quam, sed tincidunt dolor eleifend id. Praesent eget varius magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lacus massa, aliquam id nunc at, ultrices vestibulum ante. In nibh nulla, consequat dictum tempus nec, consectetur at erat. Aenean quis viverra nibh. Sed vitae justo in magna dictum bibendum elementum ac libero. Nulla varius, libero quis convallis fringilla, sapien ex eleifend nunc, quis auctor neque sapien sit amet enim. <span id="span2">Nullam id nisl eu lectus sagittis vehicula eget ut ligula. In sem nibh, tempus ut venenatis quis, sollicitudin nec ipsum. Phasellus aliquam ligula lorem, eu euismod tortor porttitor sit amet.</span> Vestibulum id magna non nunc scelerisque tincidunt ut eget neque. Sed volutpat tortor nec ex hendrerit porttitor. Sed ut diam vitae diam maximus cursus. Pellentesque vel placerat metus, a ullamcorper sem. Mauris a interdum ipsum. Mauris et nisi erat. Proin urna dui, semper eu porttitor id, congue eleifend ex. Curabitur faucibus imperdiet purus id ullamcorper. Nulla odio velit, ullamcorper in mi iaculis, fringilla finibus odio. Mauris enim dui, placerat sed nunc sit amet, consequat vestibulum massa.</p>
+                </div>
+                <div class="cbutton">
+                    <button onclick="reset()">RESET</button>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="mid">
-        <div class="srodek">
-            <p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit velit dolor doloribus recusandae ipsam dolorem nam minima autem atque quos consequatur blanditiis debitis assumenda nisi praesentium et, molestias explicabo.</p>
+        <div class="right">
+            <div class="block2">
+                <div class="cn"><h1>Span</h1></div>
+                <div class="fontsize"><p>Font size</p><input type="text" id="fontsize2" placeholder="Podaj wartość"></div>
+                <div class="color2"><p>Color</p><input type="color" id="color2"></div>
+                <div class="bgcolor"><p>Bg - color</p><input type="color" id="bgcolor"></div>
+                <div class="bordersize2"><p>Border size</p><input type="text" id="bordersize2" placeholder="Podaj wartość"></div>
+                <div class="bordercolor2"><p>Border color</p><input type="color" id="bordercolor2" placeholder="Podaj wartość"></div>
+                <div class="borderstyle2"><p>Border style</p><input type="text" id="borderstyle2" placeholder="Podaj wartość"></div>
+                <div class="range"><p>↔</p><input type="range" min="0" max="100" step="1" id="range1"></div>
+                <div class="range"><p>↕</p><input type="range" min="0" max="100" step="1" id="range2"></div>
+                <div class="rbutton"><button onclick="reset3()">RESET</button><button id="button" onclick="size2(); color2(); bgcolor2(); bsize2(); bcolor2(); bstyle2(); range1(); range2()" >Zmień</button></div>
+            </div>
         </div>
-        <div class="tak">
-            <button class="but2">reset</button>
-        </div>
-    </div>
-    <div class="right">
-        <h1>Span</h1>
-        <h2>font size</h2>
-        <input type="number" class="niet">
-        <h2>bg-color</h2>
-        <input type="color" class="niet">
-        <h2>color</h2>
-        <input type="color" class="niet">
-        <h2>border size</h2>
-        <input type="number" class="niet">
-        <h2>border color</h2>
-        <input type="color" class="niet">
-        <h2>border style</h2>
-        <input type="text" class="niet">
-        <div class="nire"><button>reset</button><button>wyślij</button></div>
-        <input type="range" min="200" max="1000" class="niet">
-        <input type="range" min="200" max="1000" class="niet">
-
-
-    </div>
-</div>
+    </main>
+    <script>
+        function size(){
+            var InputValue = document.getElementById("fontsize").value;
+            document.getElementById("lorem").style.fontSize = InputValue +"px";
+        }
+        function color(){
+            var bgcolor = document.getElementById("kolor").value;
+            document.getElementById("lorem").style.color = bgcolor;
+        }
+        function space(){
+            var InputValue = document.getElementById("letterspace").value;
+            document.getElementById("lorem").style.letterSpacing = InputValue +"px";
+        }
+        function style(){
+            var InputValue = document.getElementById("style").value;
+            document.getElementById("lorem").style.fontStyle = InputValue;
+        }
+        function bcolor(){
+            var bgcolor = document.getElementById("bordercolor").value;
+            document.getElementById("lorem").style.borderColor = bgcolor;
+        }
+        function bsize(){
+            var InputValue = document.getElementById("bordersize").value;
+            document.getElementById("lorem").style.borderWidth = InputValue +"px";
+        }
+        function bstyle(){
+            var InputValue = document.getElementById("borderstyle").value;
+            document.getElementById("lorem").style.borderStyle = InputValue;
+        }
+        function bradius(){
+            var InputValue = document.getElementById("borderradius").value;
+            document.getElementById("lorem").style.borderRadius = InputValue +"px";
+        }
+        function reset1(){
+            document.getElementById("lorem").style.fontSize = "";
+            document.getElementById("lorem").style.color = "";
+            document.getElementById("lorem").style.letterSpacing = "";
+            document.getElementById("lorem").style.fontStyle = "";
+        }
+        function reset2(){
+            document.getElementById("lorem").style.borderColor = "";
+            document.getElementById("lorem").style.borderWidth = "";
+            document.getElementById("lorem").style.borderStyle = "";
+            document.getElementById("lorem").style.borderRadius = "";
+        }
+        function size2(){
+            var InputValue = document.getElementById("fontsize2").value;
+            document.getElementById("span").style.fontSize = InputValue +"px";
+            document.getElementById("span2").style.fontSize = InputValue +"px";
+        }
+        function color2(){
+            var bgcolor = document.getElementById("color2").value;
+            document.getElementById("span").style.color = bgcolor;
+            document.getElementById("span2").style.color = bgcolor;
+        }
+        function bgcolor2(){
+            var bgcolor = document.getElementById("bgcolor").value;
+            document.getElementById("span").style.backgroundColor = bgcolor;
+            document.getElementById("span2").style.backgroundColor = bgcolor;
+        }
+        function bsize2(){
+            var InputValue = document.getElementById("bordersize2").value;
+            document.getElementById("span").style.borderWidth = InputValue +"px";
+            document.getElementById("span2").style.borderWidth = InputValue +"px";
+        }
+        function bcolor2(){
+            var bgcolor = document.getElementById("bordercolor2").value;
+            document.getElementById("span").style.borderColor = bgcolor;
+            document.getElementById("span2").style.borderColor = bgcolor;
+        }
+        function bstyle2(){
+            var InputValue = document.getElementById("borderstyle2").value;
+            document.getElementById("span").style.borderStyle = InputValue;
+            document.getElementById("span2").style.borderStyle = InputValue;
+        }
+        function reset3(){
+            document.getElementById("span").style.borderColor = "";
+            document.getElementById("span").style.borderWidth = "";
+            document.getElementById("span").style.borderStyle = "";
+            document.getElementById("span").style.fontSize = "";
+            document.getElementById("span").style.color = "";
+            document.getElementById("span").style.background = "";
+            document.getElementById("span2").style.borderColor = "";
+            document.getElementById("span2").style.borderWidth = "";
+            document.getElementById("span2").style.borderStyle = "";
+            document.getElementById("span2").style.fontSize = "";
+            document.getElementById("span2").style.color = "";
+            document.getElementById("span2").style.background = "";
+        }
+        function reset(){
+            document.getElementById("lorem").style = "";
+            document.getElementById("span").style = "";
+            document.getElementById("span2").style = "";
+        }
+        function range1(){
+            let slide_size = document.getElementById("range1").value;
+            document.getElementById("lorem").style.width=slide_size+"px";
+        }
+        function range2(){
+            let slide_height = document.getElementById("range2").value;
+            document.getElementById("lorem").style.height=slide_height+"px";
+        }
+    </script>
 </body>
 </html>
